@@ -1,0 +1,24 @@
+Inicio
+    // Definir la serie térmica de entrada
+    Definir A como arreglo con valores [34, 18, 42, 12, 29]
+    N = 5 (longitud del arreglo)
+    
+    // Iterar a través de cada elemento del arreglo excepto el último
+    Para i desde 0 Hasta N - 2 Hacer
+        indiceMinimo = i
+        
+        // Buscar el índice del elemento menor en la porción restante
+        Para j desde i + 1 Hasta N - 1 Hacer
+            Si A[j] < A[indiceMinimo] Entonces
+                indiceMinimo = j
+            Fin Si
+        Fin Para
+        
+        // Intercambiar el elemento actual con el menor encontrado
+        Si indiceMinimo != i Entonces
+            Intercambiar A[i] con A[indiceMinimo]
+        Fin Si
+    Fin Para
+    
+    Mostrar "Arreglo ordenado:", A
+Fin
