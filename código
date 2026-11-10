@@ -1,0 +1,18 @@
+# Serie térmica desordenada asignada
+lecturas = [34, 18, 42, 12, 29]
+n = len(lecturas)
+
+# Implementación del algoritmo Selection Sort
+for i in range(n - 1):
+    indice_minimo = i
+    for j in range(i + 1, n):
+        if lecturas[j] < lecturas[indice_minimo]:
+            indice_minimo = j
+            
+    # Intercambio manual de posiciones
+    if indice_minimo != i:
+        temp = lecturas[i]
+        lecturas[i] = lecturas[indice_minimo]
+        lecturas[indice_minimo] = temp
+
+print("Lecturas térmicas ordenadas de menor a mayor:", lecturas)
